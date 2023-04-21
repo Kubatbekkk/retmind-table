@@ -1,6 +1,6 @@
 .table {
     border-collapse: collapse;
-    width: 100%;
+    width: 100vw;
     border-radius: 5px 5px 0 0;
     overflow: auto;
     background-color: azure;
@@ -23,11 +23,12 @@
 
 .table th,
 .table td {
-    padding: 8px 15px;
+    padding: 5px;
 }
 
 .table th:first-child,
 .table td:first-child {
+    width: auto;
     position: sticky;
     left: 0;
     background-color: rgb(103, 185, 158);
@@ -49,4 +50,20 @@
 .table__input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.table__store-total {
+    color: rgb(180, 85, 8);
+}
+
+.table__month-total {
+    color: rgb(180, 85, 8);
+}
+
+.table__tOt {
+    margin-left: 1rem;
+    color: rgb(5, 107, 73);
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 0.875rem;
 }

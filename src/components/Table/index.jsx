@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import calculateMonthTotal from '../../helpers/calculateMonthTotal'
 import calculateStoreTotal from '../../helpers/calculateStoreTotal'
+import calculateTotalOfTotals from '../../helpers/calculateTotalOfTotals'
 import './style.css'
 const Table = ({ data, handleBudgetChange }) => {
     return (
@@ -40,7 +41,18 @@ const Table = ({ data, handleBudgetChange }) => {
                                     />
                                 </td>
                             ))}
-                            <td>Total: {calculateStoreTotal(store.months)}</td>
+                            <td>
+                                {' '}
+                                {calculateStoreTotal(store.months) === 0 ? (
+                                    <div className="table__store-total">
+                                        Store Total
+                                    </div>
+                                ) : (
+                                    <div className="table__store-total">
+                                        {calculateStoreTotal(store.months)}
+                                    </div>
+                                )}
+                            </td>
                         </tr>
                     </Fragment>
                 ))}
@@ -50,11 +62,26 @@ const Table = ({ data, handleBudgetChange }) => {
                     <td>Total</td>
                     {data[0].months.map((month) => (
                         <td key={month.id}>
-                            <span>t: </span>{' '}
-                            {calculateMonthTotal(data, month.name)}
+                            {calculateMonthTotal(data, month.name) === 0 ? (
+                                <div className="table__month-total">
+                                    Month Total
+                                </div>
+                            ) : (
+                                <div className="table__month-total">
+                                    {calculateMonthTotal(data, month.name)}
+                                </div>
+                            )}
                         </td>
                     ))}
-                    <td>Total of Totals</td>
+                    <td>
+                        {calculateTotalOfTotals(data) === 0 ? (
+                            <div className="table__tOt">Total Of Totals</div>
+                        ) : (
+                            <div className="table__tOt">
+                                {calculateTotalOfTotals(data)}
+                            </div>
+                        )}
+                    </td>
                 </tr>
             </tfoot>
         </table>
