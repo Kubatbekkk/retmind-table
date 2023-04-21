@@ -29,6 +29,8 @@ const Table = ({ data, handleBudgetChange }) => {
                                         placeholder={
                                             month.value > 0 ? '' : 'your value'
                                         }
+                                        min="1"
+                                        max="4"
                                         value={
                                             month.value > 0 ? month.value : ''
                                         }
