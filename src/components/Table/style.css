@@ -24,12 +24,14 @@
 .table th,
 .table td {
     padding: 5px;
+    width: 80px;
 }
 
 .table th:first-child,
 .table td:first-child {
     width: auto;
     position: sticky;
+    width: 120px;
     left: 0;
     background-color: rgb(103, 185, 158);
 }
