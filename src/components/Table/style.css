@@ -25,6 +25,7 @@
 .table td {
     padding: 5px;
     width: 80px;
+    height: 30px;
     text-align: center;
 }
 
@@ -35,6 +36,12 @@
     width: 100px;
     left: 0;
     background-color: rgb(103, 185, 158);
+}
+
+.table th:last-child,
+.table td:last-child {
+    font-size: 0.8rem;
+    padding-right: 6px;
 }
 
 .table__input {
