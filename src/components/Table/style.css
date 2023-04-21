@@ -64,6 +64,7 @@
 
 .table__store-total {
     color: rgb(180, 85, 8);
+    max-width: 100px;
 }
 
 .table__month-total {
