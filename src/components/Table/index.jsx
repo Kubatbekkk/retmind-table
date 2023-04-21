@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import calculateMonthTotal from '../../helpers/calculateMonthTotal'
 import calculateStoreTotal from '../../helpers/calculateStoreTotal'
 import './style.css'
 const Table = ({ data, handleBudgetChange }) => {
@@ -23,8 +24,12 @@ const Table = ({ data, handleBudgetChange }) => {
                                     <input
                                         type="number"
                                         className="table__input"
-                                        placeholder="your value"
-                                        value={month.value === 0 || month.value}
+                                        placeholder={
+                                            month.value > 0 ? '' : 'your value'
+                                        }
+                                        value={
+                                            month.value > 0 ? month.value : ''
+                                        }
                                         onChange={(e) =>
                                             handleBudgetChange(
                                                 store.store.id,
@@ -44,7 +49,10 @@ const Table = ({ data, handleBudgetChange }) => {
                 <tr>
                     <td>Total</td>
                     {data[0].months.map((month) => (
-                        <td key={month.id}>Total</td>
+                        <td key={month.id}>
+                            <span>t: </span>{' '}
+                            {calculateMonthTotal(data, month.name)}
+                        </td>
                     ))}
                     <td>Total of Totals</td>
                 </tr>
