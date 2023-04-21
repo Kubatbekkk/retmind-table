@@ -4,6 +4,8 @@ Task: https://docs.google.com/document/d/1yyKmHhd4OkhMlxe5t5Np-y_qEswIXKd3rklyyb
 
 Deploy: https://retmindtest.netlify.app/
 
+Note: Разработка велась в ветке dev, но не была еще замержена для наглядности
+
 #### Done: 04-21-2023
 
 - [x]  Нужно сверстать таблицу (custom component) распределения Бюджета по магазинам и месяцам (Store 1 -> 12 months)
