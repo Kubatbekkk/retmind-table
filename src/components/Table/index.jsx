@@ -3,6 +3,7 @@ import calculateMonthTotal from '../../helpers/calculateMonthTotal'
 import calculateStoreTotal from '../../helpers/calculateStoreTotal'
 import calculateTotalOfTotals from '../../helpers/calculateTotalOfTotals'
 import './style.css'
+
 const Table = ({ data, handleBudgetChange }) => {
     return (
         <table className="table">
