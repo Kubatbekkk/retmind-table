@@ -1,0 +1,80 @@
+.table {
+    border-collapse: collapse;
+    width: 100vw;
+    border-radius: 5px 5px 0 0;
+    overflow: auto;
+    background-color: azure;
+}
+
+.table thead tr {
+    background-color: rgb(103, 185, 158);
+    color: white;
+    text-align: center;
+}
+
+.table tbody tr {
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table th,
+.table td {
+    padding: 5px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+}
+
+.table th:first-child,
+.table td:first-child {
+    width: auto;
+    position: sticky;
+    width: 100px;
+    left: 0;
+    background-color: rgb(103, 185, 158);
+}
+
+.table th:last-child,
+.table td:last-child {
+    font-size: 0.8rem;
+    padding-right: 6px;
+}
+
+.table__input {
+    width: 58px;
+    height: 30px;
+    margin: 0;
+}
+
+.table__input::placeholder {
+    font-size: 0.8rem;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.table__input::-webkit-outer-spin-button,
+.table__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.table__store-total {
+    color: rgb(180, 85, 8);
+    max-width: 100px;
+}
+
+.table__month-total {
+    color: rgb(180, 85, 8);
+}
+
+.table__tOt {
+    margin-left: 1rem;
+    color: rgb(5, 107, 73);
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 0.875rem;
+}
